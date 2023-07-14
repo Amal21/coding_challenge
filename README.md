@@ -35,7 +35,8 @@ Start the frontend application:
 Access the application in your browser: [http://localhost:3000](http://localhost:3000)
 
 ## API Documentation
-This is the documentation of the endpoints with Swagger [http://localhost:8000/api/](http://localhost:8000/api/)
+This is the documentation of the endpoints with Swagger: [http://localhost:8000/api/](http://localhost:8000/api/)
+
 Request and response formats follow standard RESTful conventions.
 
 ## License
