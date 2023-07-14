@@ -142,7 +142,7 @@ const FilterComponent = ({
           <div>
             <button
               className={`${
-                sortedBy === "founded" ? "bg-blue-500" : "bg-gray-300"
+                sortedBy === "founded" ? "bg-blue-500" : "bg-gray-500"
               } text-white py-2 px-3 rounded flex items-center space-x-1 mt-5`}
               onClick={() => handleSortBy("founded")}
             >
@@ -170,7 +170,7 @@ const FilterComponent = ({
           <div>
             <button
               className={`${
-                sortedBy === "population" ? "bg-blue-500" : "bg-gray-300"
+                sortedBy === "population" ? "bg-blue-500" : "bg-gray-500"
               } text-white py-2 px-3 rounded flex items-center space-x-1 mt-5`}
               onClick={() => handleSortBy("population")}
             >

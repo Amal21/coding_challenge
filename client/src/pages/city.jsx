@@ -5,20 +5,42 @@ import Map from "../components/map/map";
 const CityDetails = () => {
   const { name } = useParams();
   const [cityDetails, setCityDetails] = useState(null);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     fetch(`http://localhost:8000/cities/cityName/${name}`)
-      .then((response) => response.json())
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error(response.status);
+        }
+      })
       .then((data) => setCityDetails(data))
       .catch((error) => {
-        console.error("Error fetching city details:", error);
+        setError(error.message);
       });
   }, [name]);
+
+  if (error) {
+    if (error === "404") {
+      return (
+        <div className="flex items-center justify-center mt-20">
+          <div className="bg-white rounded-lg shadow-md p-4">
+            <p className="text-lg font-bold text-red-600">
+              No city found with the given name: {name}
+            </p>
+          </div>
+        </div>
+      );
+    }
+
+    return <div>Something went wrong</div>;
+  }
 
   if (!cityDetails) {
     return <div>Loading...</div>;
   }
-
   return (
     <div className="max-w-xl mx-auto bg-white rounded-lg shadow-md p-6 flex items-center space-x-4 mt-10">
       <div className="w-full h-full bg-white rounded-l ">

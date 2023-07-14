@@ -82,7 +82,7 @@ function Home() {
 
   return (
     <div>
-      <h2 className="text-3xl font-bold text-center text-black mb-5 mt-5">
+      <h2 className="text-3xl font-bold text-center text-blue-400 mb-5 mt-5">
         Discover those cities!
       </h2>
 
