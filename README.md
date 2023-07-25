@@ -14,22 +14,22 @@ The backend application handles the endpoints for cities.
 
 ## Installation
 1. Clone the repository: `git clone <repository-url>`
-2. Navigate to the frontend folder: `cd frontend`
+2. Navigate to the frontend folder: `cd client`
 3. Install frontend dependencies: `yarn install`
-4. Navigate to the backend folder: `cd ../backend`
+4. Navigate to the backend folder: `cd server`
 5. Install backend dependencies: `yarn install`
 
 ## Folder Structure
-- `frontend`: Contains the frontend application built with React.js.
-- `backend`: Contains the backend application built with Nest.js.
+- `client`: Contains the frontend application built with React.js.
+- `server`: Contains the backend application built with Nest.js.
 
 ## Usage
 Start the backend server:
-- Navigate to the backend folder: `cd backend`
+- Navigate to the backend folder: `cd server`
 - Start the server: `yarn run start`
 
 Start the frontend application:
-- Navigate to the frontend folder: `cd ../frontend`
+- Navigate to the frontend folder: `cd client`
 - Start the application: `yarn start`
 
 Access the application in your browser: [http://localhost:3000](http://localhost:3000)
